@@ -1,4 +1,4 @@
-package org.simpmusic.crashlytics
+package org.pandoos.crashlytics
 
 import android.content.Context
 import com.maxrave.domain.data.player.PlayerError

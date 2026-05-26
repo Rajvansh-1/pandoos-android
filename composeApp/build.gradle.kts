@@ -36,7 +36,7 @@ kotlin {
         freeCompilerArgs.add("-Xexpect-actual-classes")
     }
     android {
-        namespace = "com.maxrave.simpmusic.composeapp"
+        namespace = "com.pandoos.music.composeapp"
         compileSdk = 37
         minSdk = 26
         withJava()
@@ -304,7 +304,7 @@ val vlcSetupLinuxCi by tasks.registering {
             into(outputDir)
             // Ship the full VLC plugin set (matches the v1.2.1 release).
             // A curated subset based on upstream vlc-setup defaults turned
-            // out to be insufficient for SimpMusic — YT Music streaming
+            // out to be insufficient for Pandoos — YT Music streaming
             // depends on HTTP/HTTPS access + MP4/WebM demuxers that the
             // upstream music-app preset doesn't cover. `**/` is needed
             // because include() evaluates against the original jar paths
@@ -517,7 +517,7 @@ val vlcSetupAll by tasks.registering {
 }
 
 buildkonfig {
-    packageName = "com.maxrave.simpmusic"
+    packageName = "com.pandoos.music"
     exposeObjectWithName = "BuildKonfig"
     defaultConfigs {
         val versionName =

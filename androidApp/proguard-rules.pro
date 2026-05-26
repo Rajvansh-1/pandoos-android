@@ -58,9 +58,9 @@
 
 -dontwarn org.slf4j.impl.StaticLoggerBinder
 -dontwarn kotlinx.serialization.internal.ClassValueReferences
--keep class com.maxrave.simpmusic.data.model.** { *; }
--keep class com.maxrave.simpmusic.extension.AllExtKt { *; }
--keep class com.maxrave.simpmusic.extension.AllExtKt$* { *; }
+-keep class com.pandoos.music.data.model.** { *; }
+-keep class com.pandoos.music.extension.AllExtKt { *; }
+-keep class com.pandoos.music.extension.AllExtKt$* { *; }
 -keep class com.maxrave.kotlinytmusicscraper.extension.MapExtKt$* { *; }
 
 ## Removes all Logs as they cause perfomance issues in prod
@@ -210,9 +210,9 @@
 
 -keep class com.maxrave.kotlinytmusicscraper.** { *; }
 
--keep class org.simpmusic.lyrics.parser.** { *; }
--keep class org.simpmusic.lyrics.models.** { *; }
--keep class com.simpmusic.lyrics.parser.** { *; }
+-keep class org.pandoos.lyrics.parser.** { *; }
+-keep class org.pandoos.lyrics.models.** { *; }
+-keep class com.pandoos.lyrics.parser.** { *; }
 
 -keep class com.google.re2j.** { *; }
 -dontwarn com.google.re2j.Matcher

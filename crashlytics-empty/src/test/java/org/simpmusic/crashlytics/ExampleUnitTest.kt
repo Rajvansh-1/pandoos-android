@@ -1,4 +1,4 @@
-package org.simpmusic.crashlytics
+package org.pandoos.crashlytics
 
 import org.junit.Test
 
