@@ -19,6 +19,12 @@ android {
     namespace = "com.pandoos.music"
     compileSdk = 37
 
+    val localProperties = Properties()
+    val localPropertiesFile = rootProject.file("local.properties")
+    if (localPropertiesFile.exists()) {
+        localProperties.load(localPropertiesFile.inputStream())
+    }
+
     defaultConfig {
         applicationId = "com.pandoos.music"
         minSdk = 26
@@ -73,6 +79,9 @@ android {
             abiFilters.add("armeabi-v7a")
             abiFilters.add("arm64-v8a")
         }
+        
+        buildConfigField("String", "SUPABASE_URL", "\"${localProperties["SUPABASE_URL"]}\"")
+        buildConfigField("String", "SUPABASE_ANON_KEY", "\"${localProperties["SUPABASE_ANON_KEY"]}\"")
     }
 
     bundle {
@@ -171,6 +180,11 @@ dependencies {
     } else {
         implementation(projects.crashlyticsEmpty)
     }
+    
+    implementation(libs.supabase.postgrest)
+    implementation(libs.supabase.auth)
+    implementation(libs.supabase.realtime)
+    implementation(libs.ktor.android)
 }
 
 sentry {
